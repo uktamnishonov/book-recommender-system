@@ -70,17 +70,6 @@ recommendations = predict("Harry Potter", n_recommendations=10)
 
 **Why TF-IDF?** Fast, works offline, easy to understand, great results.
 
-## 📊 Performance
-
-| Metric | Value |
-|--------|-------|
-| NDCG@5 | 0.5295 |
-| Avg Similarity@5 | 0.5640 |
-| Response Time | <100ms |
-| Books in Dataset | 10,808 |
-| Coverage | 0.9% |
-| Languages | 27+ |
-
 ## ❓ FAQ
 
 **Q: How accurate?**  

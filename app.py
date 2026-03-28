@@ -54,7 +54,9 @@ def load_and_process_data():
     df["ratings_count"] = pd.to_numeric(df["ratings_count"], errors="coerce")
     df["text_reviews_count"] = pd.to_numeric(df["text_reviews_count"], errors="coerce")
 
-    # Create combined text features for TF-IDF
+    # Create combined text features for TF-IDF (remove numbers and extra whitespace)
+    import re
+
     df["text_features"] = (
         df["title"].str.lower()
         + " "
@@ -62,10 +64,10 @@ def load_and_process_data():
         + " "
         + df["language_code"].str.lower()
     )
-
-    # Add quality score (normalized rating for display)
-    df["quality_score"] = (df["average_rating"] - df["average_rating"].min()) / (
-        df["average_rating"].max() - df["average_rating"].min()
+    # Remove all digits and multiple spaces
+    df["text_features"] = df["text_features"].apply(lambda x: re.sub(r"\d+", "", x))
+    df["text_features"] = df["text_features"].apply(
+        lambda x: re.sub(r"\s+", " ", x).strip()
     )
 
     df["idx"] = range(len(df))
@@ -168,7 +170,6 @@ def get_recommendations(book_idx, n_recommendations=5, model_data=None):
             "title",
             "authors",
             "average_rating",
-            "quality_score",
             "language_code",
         ]
 
