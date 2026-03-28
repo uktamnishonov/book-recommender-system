@@ -86,22 +86,6 @@ A: Yes, see COMPLETE_SOLUTION.ipynb for the `predict()` function
 
 ---
 
-**Status:** ✅ Production-ready
-- **Metadata Quality**: 99%+ - minimal missing values
-
-## 🛠️ Dependencies
-
-```
-pandas         >=1.5.0    # Data manipulation
-numpy          >=1.23.0   # Numerical computing
-scikit-learn   >=1.3.0    # ML algorithms (TF-IDF, cosine similarity)
-yake           >=0.4.8    # Keyword extraction
-streamlit      >=1.28.0   # Web interface
-matplotlib     >=3.7.0    # Visualization
-seaborn        >=0.12.0   # Statistical plots
-jupyter        >=1.0.0    # Notebook environment
-```
-
 ## 📄 License
 
 This project is open source and available under the MIT License.
