@@ -74,8 +74,8 @@ recommendations = predict("Harry Potter", n_recommendations=10)
 
 | Metric | Value |
 |--------|-------|
-| NDCG@5 | 0.5247 |
-| Avg Similarity@5 | 0.5597 |
+| NDCG@5 | 0.5295 |
+| Avg Similarity@5 | 0.5640 |
 | Response Time | <100ms |
 | Books in Dataset | 10,808 |
 | Coverage | 0.9% |
